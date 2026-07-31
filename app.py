@@ -13,7 +13,7 @@ st.set_page_config(
 st.title("🥗 NutricaoByLuis")
 
 st.subheader(
-    "Sistema inteligente de avaliação nutricional"
+    "Sistema para dietinhas do não-nutri ainda"
 )
 
 
@@ -21,9 +21,7 @@ st.write(
     """
     Bem-vindo ao NutricaoByLuis!
 
-    Uma plataforma criada para auxiliar nutricionistas
-    na avaliação, acompanhamento e planejamento alimentar
-    dos pacientes.
+    Vamos ficar gostosas até o final do ano.
     """
 )
 
@@ -46,7 +44,6 @@ with col1:
         - TMB
         - GET
         - Macronutrientes
-        - Peso ideal
         """
     )
 
@@ -82,7 +79,7 @@ st.divider()
 
 
 st.info(
-    "Use o menu lateral para acessar as ferramentas."
+    "Use o menu lateral para acessar as opções."
 )
 
 
