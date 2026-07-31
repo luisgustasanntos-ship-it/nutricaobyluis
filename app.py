@@ -48,19 +48,6 @@ with col1:
     )
 
 
-with col2:
-
-    st.markdown(
-        """
-        ### 👥 Pacientes
-
-        - Cadastro
-        - Histórico
-        - Evolução de peso
-        - Acompanhamento
-        """
-    )
-
 
 with col3:
 
