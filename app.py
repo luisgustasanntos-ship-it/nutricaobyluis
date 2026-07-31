@@ -1,41 +1,91 @@
 import streamlit as st
 
+
+# Configuração da página
 st.set_page_config(
     page_title="NutricaoByLuis",
     page_icon="🥗",
     layout="wide"
 )
 
+
+# Cabeçalho
 st.title("🥗 NutricaoByLuis")
-st.subheader("Sua saúde começa pela alimentação.")
 
-st.markdown("---")
+st.subheader(
+    "Sistema inteligente de avaliação nutricional"
+)
 
-col1, col2 = st.columns([2, 1])
+
+st.write(
+    """
+    Bem-vindo ao NutricaoByLuis!
+
+    Uma plataforma criada para auxiliar nutricionistas
+    na avaliação, acompanhamento e planejamento alimentar
+    dos pacientes.
+    """
+)
+
+
+st.divider()
+
+
+# Apresentação das funções
+
+col1, col2, col3 = st.columns(3)
+
 
 with col1:
-    st.write("""
-    Bem-vindo ao **NutricaoByLuis**!
 
-    Aqui você poderá:
+    st.markdown(
+        """
+        ### 📊 Avaliação Nutricional
 
-    ✅ Calcular seu IMC
-
-    ✅ Descobrir seu gasto calórico diário
-
-    ✅ Calcular macronutrientes
-
-    ✅ Acompanhar sua evolução
-
-    ✅ Receber orientações nutricionais
-    """)
-
-with col2:
-    st.image(
-        "https://images.unsplash.com/photo-1490645935967-10de6ba17061",
-        use_container_width=True
+        - IMC
+        - TMB
+        - GET
+        - Macronutrientes
+        - Peso ideal
+        """
     )
 
-st.markdown("---")
 
-st.success("Escolha uma ferramenta no menu quando elas forem adicionadas.")
+with col2:
+
+    st.markdown(
+        """
+        ### 👥 Pacientes
+
+        - Cadastro
+        - Histórico
+        - Evolução de peso
+        - Acompanhamento
+        """
+    )
+
+
+with col3:
+
+    st.markdown(
+        """
+        ### 🥗 Plano Alimentar
+
+        - Banco de alimentos
+        - Cálculo de calorias
+        - Organização das refeições
+        """
+    )
+
+
+st.divider()
+
+
+st.info(
+    "Use o menu lateral para acessar as ferramentas."
+)
+
+
+st.caption(
+    "NutricaoByLuis © 2026"
+)
