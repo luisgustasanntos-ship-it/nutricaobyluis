@@ -7,6 +7,20 @@ from banco import (
     listar_plano
 )
 
+import streamlit as st
+
+from banco import (
+    criar_tabela_plano,
+    inserir_alimento,
+    listar_plano,
+    listar_pacientes
+)
+
+from login import verificar_login
+
+verificar_login()
+
+
 criar_tabela_plano()
 
 st.title("🥗 Plano Alimentar")
