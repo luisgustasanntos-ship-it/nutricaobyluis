@@ -21,7 +21,7 @@ st.write(
     """
     Bem-vindo ao NutricaoByLuis!
 
-    Um estudante de nutrição que lhe ajudará.
+    De um viado para suas best's S2
     """
 )
 
