@@ -21,7 +21,7 @@ st.write(
     """
     Bem-vindo ao NutricaoByLuis!
 
-    Vamos ficar gostosas até o final do ano.
+    Um estudante de nutrição que lhe ajudará.
     """
 )
 

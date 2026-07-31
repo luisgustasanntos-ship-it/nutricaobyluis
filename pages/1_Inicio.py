@@ -40,4 +40,4 @@ with col5:
 
 st.markdown("---")
 
-st.success("👈 Veja ao lado as opções, bixa.")
+st.success("👈 Veja ao lado as opções.")

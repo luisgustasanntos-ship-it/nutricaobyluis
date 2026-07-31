@@ -1,6 +1,10 @@
 import streamlit as st
 from banco import criar_tabela, inserir_paciente, listar_pacientes
+import streamlit as st
+from banco import listar_pacientes
+from login import verificar_login
 
+verificar_login()
 
 criar_tabela()
 
