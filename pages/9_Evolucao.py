@@ -2,9 +2,12 @@ import streamlit as st
 from datetime import date
 
 import streamlit as st
-from banco import listar_pacientes,listar_evolucao
+from banco import listar_pacientes, listar_evolucao, inserir_evolucao
 from login import verificar_login
 
+verificar_login()
+
+st.title("📈 Evolução")
 from banco import (
     criar_tabela_evolucao,
     inserir_evolucao,
