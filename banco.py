@@ -319,3 +319,56 @@ def listar_alimentos():
     conexao.close()
 
     return dados
+
+def criar_tabela_login_paciente():
+
+    conexao = conectar()
+    cursor = conexao.cursor()
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS login_paciente (
+
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        paciente_id INTEGER,
+        usuario TEXT UNIQUE,
+        senha TEXT,
+
+        FOREIGN KEY(paciente_id)
+        REFERENCES pacientes(id)
+
+    )
+    """)
+
+    conexao.commit()
+    conexao.close()
+
+    def criar_login_paciente(paciente_id, usuario, senha):
+        conexao = conectar()
+        cursor = conexao.cursor()
+
+        cursor.execute("""
+                       INSERT INTO login_paciente
+                           (paciente_id, usuario, senha)
+
+                       VALUES (?, ?, ?)
+                       """, (paciente_id, usuario, senha))
+
+        conexao.commit()
+        conexao.close()
+
+    def validar_login_paciente(usuario, senha):
+        conexao = conectar()
+        cursor = conexao.cursor()
+
+        cursor.execute("""
+                       SELECT paciente_id
+                       FROM login_paciente
+                       WHERE usuario = ?
+                         AND senha = ?
+                       """, (usuario, senha))
+
+        dados = cursor.fetchone()
+
+        conexao.close()
+
+        return dados
